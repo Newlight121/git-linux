@@ -1,0 +1,35 @@
+main: main.o input.o calcu.o
+	gcc -o main main.o input.o calcu.o
+
+main.o: main.c
+	gcc -c main.c
+
+input.o: input.c
+	gcc -c input.c
+
+calcu.o: calcu.c
+	gcc -c calcu.c
+
+clean:
+	rm -f *.o main
+
+
+name = zzk
+curname = $(name)
+curname1 := $(name)
+name = zff
+
+
+print:
+
+	@echo curname: $(curname)
+	@echo name: $(name)
+	
+
+
+print1:
+
+	@echo curname: $(curname1)
+	@echo name: $(name)
+	
+	
